@@ -1,0 +1,7 @@
+com\neurocloud\userservice\model\Product.class
+com\neurocloud\userservice\UserServiceApplication.class
+com\neurocloud\userservice\repository\UserRepository.class
+com\neurocloud\userservice\controller\UserController$1.class
+com\neurocloud\userservice\controller\UserController.class
+com\neurocloud\userservice\model\User.class
+com\neurocloud\userservice\config\SecurityConfig.class

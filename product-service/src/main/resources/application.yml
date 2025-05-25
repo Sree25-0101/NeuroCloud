@@ -1,0 +1,39 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: product-service
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+    instance-id: ${spring.application.name}:${server.port}
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+    status-page-url: http://localhost:${server.port}/actuator/info
+    health-check-url: http://localhost:${server.port}/actuator/health
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  health:
+    db:
+      enabled: false
+    diskspace:
+      enabled: true

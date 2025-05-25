@@ -1,0 +1,56 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: user-service
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081  # your auth-service issuer for the oAuthToken filter,that is this service goes to this url to validate the access_token  sent with the request
+
+#      client:                                #webclient for service-service calls, access_token authorization/validation check
+#        registration:
+#          neurocloud-client:
+#            client-id: neurocloud-client
+#            client-secret: neurocloud-secret
+#            authorization-grant-type: client_credentials
+#            scope: read,write
+#        provider:
+#          neurocloud:
+#            token-uri: http://localhost:8081/oauth2/token
+
+auth:
+  token:
+    url: http://localhost:8081/oauth2/token
+    client-id: internal-service
+    client-secret: internal-secret
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+    instance-id: ${spring.application.name}:${server.port}
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+    status-page-url: http://localhost:${server.port}/actuator/info
+    health-check-url: http://localhost:${server.port}/actuator/health
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  health:
+    db:
+      enabled: false
+    diskspace:
+      enabled: true
