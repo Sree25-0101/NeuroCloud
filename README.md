@@ -161,4 +161,4 @@ Crafted with ❤️ by Sreenidhi as part of an advanced Spring Boot microservice
 
 Demo:
 
-ResumeExtractionAndOptimization.mp4
+[ResumeExtractionAndOptimization.mp4](https://github.com/Sree25-0101/NeuroCloud/blob/f7be513c60cd56177f2d717c4c9a271dc4986cb2/ResumeExtractionAndOptimization.mp4)
