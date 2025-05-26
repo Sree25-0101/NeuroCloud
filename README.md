@@ -160,5 +160,8 @@ This project is licensed under the MIT License.
 Crafted with ❤️ by Sreenidhi as part of an advanced Spring Boot microservices journey.
 
 Demo:
+![image](https://github.com/user-attachments/assets/57d79d3a-a974-4134-a00e-73299e96fa40)
+![image](https://github.com/user-attachments/assets/cea89fe7-444a-4c60-af9e-9ee7a84874fd)
 
-[ResumeExtractionAndOptimization.mp4](https://github.com/Sree25-0101/NeuroCloud/blob/f7be513c60cd56177f2d717c4c9a271dc4986cb2/ResumeExtractionAndOptimization.mp4)
+
+(https://github.com/Sree25-0101/NeuroCloud/blob/f7be513c60cd56177f2d717c4c9a271dc4986cb2/ResumeExtractionAndOptimization.mp4)
